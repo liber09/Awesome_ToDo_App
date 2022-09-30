@@ -1,0 +1,181 @@
+html{
+    height: 100%;
+    min-width: 600px;
+    background-image: -webkit-linear-gradient(280deg,black,turquoise);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: fixed;
+}
+.container{
+    height: 100%;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.leftColumn{
+    flex:30%;
+}
+.centerColumn{
+    flex:40%;
+}
+.rightColumn{
+    flex:30%;
+}
+.calendar{
+    margin: 80px 0px;    
+}
+.Logo{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    max-width: 500px;
+    padding: 1.5rem 0;
+    align-items: center;
+}
+.octopus{
+    max-width:300px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.speechBubble{
+    max-width:300px;
+    margin-top: 20%;
+    margin-left: 20px;
+}
+.randomTaskContainer{
+    background-image: -webkit-linear-gradient(280deg,turquoise,black);
+    padding: 15px;
+    border-radius:20px;
+    display: flex;
+    font-family:'Josefin Sans', sans-serif;
+    color: rgb(36, 25, 25);
+    display:none;
+}
+.randomTask{
+    font-size: 1.5rem;
+    background-color: white;
+    border-radius:20px;
+    padding: 15px;
+    margin-left: 20px;
+}
+.CounterContainer{
+    background-image: -webkit-linear-gradient(280deg,turquoise,black);
+    padding: 15px;
+    border-radius:20px;
+    display: flex;
+    font-family:'Josefin Sans', sans-serif;
+    color: rgb(36, 25, 25);
+    display:block;
+}
+.CounterText{
+    font-size: 1.5rem;
+    background-color: white;
+    border-radius:20px;
+    padding: 15px;
+    margin-left: 15px;
+}
+.Main{
+    padding: 20px;
+}
+form{
+    background-image: -webkit-linear-gradient(280deg,turquoise,black);
+    padding: 15px;
+    border-radius:20px;
+    display: flex;
+}
+input[type = "text"]{
+    height: 30px;
+    outline: 0;
+    border: none;
+    font-size: 1rem;
+    font-family:'Josefin Sans', sans-serif;
+    color: rgb(36, 25, 25);
+    flex-grow: 1;
+    border-radius: 20px;
+}
+.emptyMessage{
+    color: red;
+    font-family:'Josefin Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    display: none;
+    background-color: lightgrey;
+    border:solid lightgrey;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+.SubmitBtn{
+    font-size: 1.5rem;
+    background-color: lightgrey;
+    outline: 0;
+    border: none;
+    color: rgb(36, 25, 25);
+    margin: 0px 0px 0px 8px;
+}
+.SubmitBtn:hover{
+    background-color: turquoise;
+}
+.ToDoList{
+    background-image: -webkit-linear-gradient(280deg,turquoise,rgb(10, 88, 80));
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 10px 25px;
+    height: 100%;
+}
+ul{
+    padding-left: 0px;
+    list-style: none;
+}
+li{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid;
+    padding: 15px 0;
+    font-size: 1rem;
+    color: rgb(36, 25, 25);
+}
+i{
+    pointer-events: none;
+}
+.ToDo-Item{
+    flex-grow: 1;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.itemButtons{
+    padding:10px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+}
+.itemButtons:hover{
+    color: turquoise;
+}
+.RemoveBtnDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.RemoveAllBtn{ 
+    padding: 2px 3px;
+    font-size: 1.5rem;
+    background-color: lightgrey;
+    outline: 0;
+    border: none;
+    color: rgb(36, 25, 25);
+    margin: 10px 10px 10px 0px;
+    border-radius: 20px;
+}
+.RemoveAllBtn:hover{
+    background-color: turquoise;
+}
+.ToDoItem{
+    transition: all 0.3s ease-out;
+}
+.ToDoItem-fall{
+    transform: translateY(12rem) rotateZ(10deg); 
+    opacity: 0;
+}

@@ -6,14 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awesome ToDo App</title>
     <link rel = "stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="Container">
-    <h1>Awesome ToDo App</h1>
+<body class="container">
+    <div class="leftColumn">
+        <div class = "calendar">
+            <iframe src="https://calendar.google.com/calendar/embed?height=200&wkst=1&bgcolor=%238dccbe&ctz=Europe%2FBerlin&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&src=NzAxOGMwNjRmN2E5YjRmZDgxZDAxNWUzZWI2YTBjMmM5ZTM2OTU0YmQyY2ZkYjY1MzU3MTRkZjAxOTYwYzY0YkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23AD1457" style="border:solid 1px #777" width="400" height="400" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <div class ="CounterContainer">
+            <p class="CounterText">0 of 0 tasks done</p>
+        </div>
+    </div>
+    <div class="centerColumn">
+        <header class = "Logo">
+            <a href="" target="_self">
+                <img class = "Logo" src="images/logo.png" alt="Awesome ToDo octopus">
+            </a>
+            <h1 class = "Headline">Awesome ToDo App</h1>
+        </header>
+        <div class="Main">
+            <form>
+                <input type="text" placeholder="Enter a task">
+                <button class="SubmitBtn" type="submit"><i class="fa-solid fa-plus"></i></button>
+            </form>
+            <div class ="emptyMessage">
+                <p>Input field is empty! Please enter a task...</p>
+            </div>
+            <div class="ToDoList">
+                <ul>
+        
+                </ul>
+                <div class="RemoveBtnDiv">
+                    <button class="RemoveAllBtn" type="button" id="RemoveAll">Remove all</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rightColumn">
+        <img class = "speechBubble" src="images/speech_bubble.png" alt="Speech bubble">
+        <img class = "octopus" src="images/octopus_transparent.png" alt="Awesome ToDo octopus">
+        <div class="RemoveBtnDiv">
+            <button id="helpMeBtn" class="RemoveAllBtn">Help me!</button>
+        </div>
+        <div class="randomTaskContainer">
+            <p class="randomTask"></p>
+        </div>
+        
+        
+    </div>
+    
+    
 
-  <script type = "text/javascript" src="script.js"></script>  
+  <script src="script.js"></script>  
 </body>
 </html>
