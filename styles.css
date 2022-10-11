@@ -8,7 +8,7 @@ html{
 }
 .container{
     height: 100%;
-    width: 1200px;
+    width: 1600px;
     display: flex;
     justify-content: center;
     margin: auto;
@@ -16,12 +16,14 @@ html{
 }
 .leftColumn{
     flex:30%;
+    margin-right: 200px;
 }
 .centerColumn{
     flex:40%;
 }
 .rightColumn{
     flex:30%;
+    margin-left: 200px;
 }
 .calendar{
     margin: 80px 0px;    
@@ -32,12 +34,60 @@ html{
     flex-direction: column;
     max-width: 500px;
     padding: 1.5rem 0;
+    transition: transform 0.8s;
     align-items: center;
+}
+.headline{
+    font-size: 20px;
+    width: 50%;
+    position: relative;
+    background: #cf6363;
+    color: #fff;
+    text-align: center;
+    padding: 1em 2em;
+    margin: 2em auto 3em;
+}
+.headline::before, .headline::after{
+    content: "";
+    position:absolute;
+    display: block;
+    bottom:-1em;
+    border:1.5em solid #dd4a4a;
+    z-index: -1;
+}
+.headline::before{
+    left: -2em;
+    border-right-width: 1.5em;
+    border-left-color: transparent;
+}
+.headline::after{
+    right:-2em;
+    border-left-width: 1.5em;
+    border-right-color: transparent;
+}
+.headline .headline-content::before, .headline .headline-content::after{
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #804f7c transparant transparant transparant;
+    bottom:-1em;
+}
+.headline .headline-content::before{
+    left:0;
+    border-width:1em 0 0 1em;
+}
+.headline .headline-content::after{
+    right:0;
+    border-width:1em 1em 0 0;
 }
 .octopus{
     max-width:300px;
     margin-top: 10px;
     margin-left: 20px;
+}
+.octopus:hover{
+    transform: scale(3);
 }
 .speechBubble{
     max-width:300px;
