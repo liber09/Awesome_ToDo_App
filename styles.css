@@ -1,176 +1,82 @@
 html{
     height: 100%;
     min-width: 600px;
-    background-image: -webkit-linear-gradient(280deg,black,turquoise);
+    background-image: -webkit-linear-gradient(rgb(253, 197, 198),rgb(252, 124, 127));
     background-repeat: no-repeat;
     background-size: auto;
     background-attachment: fixed;
+    margin:0;
+}
+h1{
+    font-size: 6rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
 }
 .container{
-    height: 100%;
-    width: 1600px;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    font-family: 'Josefin Sans', sans-serif;
+    height: 400px;
+    width: 600px;
+    margin: 0 auto;
 }
-.leftColumn{
-    flex:30%;
-    margin-right: 200px;
-}
+
 .centerColumn{
-    flex:40%;
-}
-.rightColumn{
-    flex:30%;
-    margin-left: 200px;
-}
-.calendar{
-    margin: 80px 0px;    
-}
-.Logo{
-    display: flex;
-    margin: auto;
-    flex-direction: column;
-    max-width: 500px;
-    padding: 1.5rem 0;
-    transition: transform 0.8s;
-    align-items: center;
-}
-.headline{
-    font-size: 20px;
-    width: 50%;
-    position: relative;
-    background: #cf6363;
-    color: #fff;
-    text-align: center;
-    padding: 1em 2em;
-    margin: 2em auto 3em;
-}
-.headline::before, .headline::after{
-    content: "";
-    position:absolute;
-    display: block;
-    bottom:-1em;
-    border:1.5em solid #dd4a4a;
-    z-index: -1;
-}
-.headline::before{
-    left: -2em;
-    border-right-width: 1.5em;
-    border-left-color: transparent;
-}
-.headline::after{
-    right:-2em;
-    border-left-width: 1.5em;
-    border-right-color: transparent;
-}
-.headline .headline-content::before, .headline .headline-content::after{
-    content: "";
-    position: absolute;
-    display: block;
-    border-style: solid;
-    border-color: #804f7c transparant transparant transparant;
-    bottom:-1em;
-}
-.headline .headline-content::before{
-    left:0;
-    border-width:1em 0 0 1em;
-}
-.headline .headline-content::after{
-    right:0;
-    border-width:1em 1em 0 0;
-}
-.octopus{
-    max-width:300px;
-    margin-top: 10px;
-    margin-left: 20px;
-}
-.octopus:hover{
-    transform: scale(3);
-}
-.speechBubble{
-    max-width:300px;
-    margin-top: 20%;
-    margin-left: 20px;
-}
-.randomTaskContainer{
-    background-image: -webkit-linear-gradient(280deg,turquoise,black);
-    padding: 15px;
-    border-radius:20px;
-    display: flex;
-    font-family:'Josefin Sans', sans-serif;
-    color: rgb(36, 25, 25);
-    display:none;
-}
-.randomTask{
-    font-size: 1.5rem;
+    animation: bounce 1s;
     background-color: white;
-    border-radius:20px;
-    padding: 15px;
-    margin-left: 20px;
 }
-.CounterContainer{
-    background-image: -webkit-linear-gradient(280deg,turquoise,black);
-    padding: 15px;
-    border-radius:20px;
-    display: flex;
-    font-family:'Josefin Sans', sans-serif;
-    color: rgb(36, 25, 25);
-    display:block;
+@keyframes bounce {
+    0% {
+      transform: translateY(-2000px);
+    }
+    60% {
+      transform: translateY(200px) ;
+    }
+    100% {
+      transform: translateY(0) ;
+    }
 }
 .CounterText{
     font-size: 1.5rem;
-    background-color: white;
-    border-radius:20px;
-    padding: 15px;
-    margin-left: 15px;
+    text-align: center;
 }
-.Main{
+.main{
     padding: 20px;
+    background-color: white;
+    box-shadow: 5px 10px rgb(252, 124, 127, 0.2);
 }
 form{
-    background-image: -webkit-linear-gradient(280deg,turquoise,black);
-    padding: 15px;
-    border-radius:20px;
     display: flex;
 }
 input[type = "text"]{
     height: 30px;
-    outline: 0;
-    border: none;
-    font-size: 1rem;
-    font-family:'Josefin Sans', sans-serif;
-    color: rgb(36, 25, 25);
-    flex-grow: 1;
-    border-radius: 20px;
-}
-.emptyMessage{
-    color: red;
-    font-family:'Josefin Sans', sans-serif;
+    border: line;
     font-size: 1.5rem;
-    font-weight: 600;
-    text-align: center;
-    display: none;
-    background-color: lightgrey;
-    border:solid lightgrey;
-    margin-top: 20px;
-    border-radius: 20px;
+    margin-left: auto;
+    margin-right: 2.5px;
 }
 .SubmitBtn{
     font-size: 1.5rem;
-    background-color: lightgrey;
-    outline: 0;
-    border: none;
-    color: rgb(36, 25, 25);
-    margin: 0px 0px 0px 8px;
+    border: line;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: 2.5px;
 }
 .SubmitBtn:hover{
-    background-color: turquoise;
+    background-color: rgb(245, 245, 245);
 }
+.emptyMessage{
+    color: red;
+    font-style: italic;
+    text-align: center;
+    display: none;
+    margin-top: 20px;
+    animation:blink 1s;
+    animation-iteration-count: 2;
+}
+@keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
 .ToDoList{
-    background-image: -webkit-linear-gradient(280deg,turquoise,rgb(10, 88, 80));
-    border-radius: 20px;
     margin-top: 20px;
     padding: 10px 25px;
     height: 100%;
@@ -178,54 +84,46 @@ input[type = "text"]{
 ul{
     padding-left: 0px;
     list-style: none;
+    text-align: center;
 }
 li{
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid;
     padding: 15px 0;
     font-size: 1rem;
-    color: rgb(36, 25, 25);
+    animation: flyUp 0.2s;
 }
-i{
-    pointer-events: none;
+
+@keyframes flyUp {
+    0% {
+      transform: translateY(50px);
+    }
+    100% {
+      transform: translateY(0) ;
+    }
 }
+
 .ToDo-Item{
-    flex-grow: 1;
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 2rem;
+    margin-left: auto;
+    text-align: center;
+    text-decoration: none;
 }
-.itemButtons{
+.ToDo-Item:hover{
+    text-decoration: line-through;
+}
+.ToDo-Item-Completed{
+    font-size: 2rem;
+    margin-left: auto;
+    text-align: center;
+    text-decoration: line-through;
+}
+
+.deleteItemButton{
     padding:10px;
     font-size: 1.5rem;
     background-color: transparent;
     border: none;
+    margin-right: auto;
 }
-.itemButtons:hover{
-    color: turquoise;
-}
-.RemoveBtnDiv{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-.RemoveAllBtn{ 
-    padding: 2px 3px;
-    font-size: 1.5rem;
-    background-color: lightgrey;
-    outline: 0;
-    border: none;
-    color: rgb(36, 25, 25);
-    margin: 10px 10px 10px 0px;
-    border-radius: 20px;
-}
-.RemoveAllBtn:hover{
-    background-color: turquoise;
-}
-.ToDoItem{
-    transition: all 0.3s ease-out;
-}
-.ToDoItem-fall{
-    transform: translateY(12rem) rotateZ(10deg); 
-    opacity: 0;
+.deleteItemButton:hover{
+    color:beige;
 }
